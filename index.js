@@ -3,6 +3,9 @@ module.exports = {
     "eslint:recommended",
     "prettier",
   ],
+  "plugins": [
+    "spellcheck"
+  ],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -50,5 +53,53 @@ module.exports = {
     "no-var": "error",
     "prefer-const": "error",
     "prefer-template": "error",
+
+    "spellcheck/spell-check": ["error", {
+      "comments": true,
+      "strings": true,
+      "identifiers": true,
+      "lang": "en_GB",
+      "skipWords": [
+        "api",
+        "args",
+        "async",
+        "auth",
+        "cors",
+        "defs",
+        "del",
+        "dev",
+        "dict",
+        "dom",
+        "err",
+        "eslint",
+        "filename",
+        "func",
+        "github",
+        "gql",
+        "graphql",
+        "html",
+        "http",
+        "jsx",
+        "middleware",
+        "params",
+        "pre",
+        "readdir",
+        "resolvers",
+        "src",
+        "stderr",
+        "stdin",
+        "stdout",
+        "uri",
+        "util",
+        "utils",
+        "webpack",
+        "xml"
+      ],
+      "skipIfMatch": [
+        "http://[^s]*",
+        "^[-\\w]+\/[-\\w\\.]+$"
+      ],
+      "minLength": 3,
+    }],
   }
 };

@@ -76,6 +76,10 @@ module.exports = {
         "svg",
         "xml",
 
+        // American English
+        "color",
+        "center",
+
         // Programming gibberish
         "addon",
         "addons",
@@ -98,7 +102,6 @@ module.exports = {
         "chainable",
         "cli",
         "clickability",
-        "color",
         "concat",
         "conf",
         "config",
@@ -122,6 +125,7 @@ module.exports = {
         "dict",
         "dir",
         "dirname",
+        "div",
         "dom",
         "dragend",
         "dragstart",
@@ -256,6 +260,8 @@ module.exports = {
       ],
       "skipIfMatch": [
         "http(s)?://[^s]*",
+        // Hex colours
+        "^#[0-9a-f]{3,6}$",
       ],
       "minLength": 3,
     }],

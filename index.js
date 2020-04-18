@@ -239,6 +239,8 @@ module.exports = {
         "uuid",
         "validator",
         "viewport",
+        "vh",
+        "vw",
         "webkit",
         "webpack",
         "webserver",

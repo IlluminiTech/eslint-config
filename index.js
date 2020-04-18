@@ -63,6 +63,7 @@ module.exports = {
       "skipWords": [
         // Node package names
         "eslint",
+        "gatsby",
         "github",
 
         // File extensions
@@ -165,6 +166,7 @@ module.exports = {
         "multiselect",
         "nav",
         "noop",
+        "osx",
         "param",
         "params",
         "parsers",
@@ -248,6 +250,7 @@ module.exports = {
       ],
       "skipIfMatch": [
         "http(s)?://[^s]*",
+        "^[-\\w]+\/[-\\w\\.]+$",
       ],
       "minLength": 3,
     }],

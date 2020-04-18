@@ -144,7 +144,7 @@ As another line of defense, if you want ESLint to automatically fix your errors 
    ```json
    {
      "lint-staged": {
-       "*.js": ["eslint --fix", "git add"]
+       "*.js": ["eslint --fix"]
      },
      "husky": {
        "hooks": {

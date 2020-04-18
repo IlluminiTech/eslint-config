@@ -1,0 +1,32 @@
+{
+  "name": "@illumini/eslint-config",
+  "version": "0.1.0",
+  "description": "Illumini's base ESLint configuration.",
+  "main": "index.js",
+  "contributers": [
+    "Wayne Haffenden <wayne@illumini.io>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IlluminiTech/eslint-config"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "prettier",
+    "config",
+    "javascript",
+    "illumini"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IlluminiTech/eslint-config/issues"
+  },
+  "homepage": "https://github.com/IlluminiTech/eslint-config",
+  "peerDependencies": {
+    "babel-eslint": "^10.x.x",
+    "eslint": "^6.x.x",
+    "eslint-config-prettier": "^6.x.x",
+    "prettier": "^2.x.x"
+  }
+}

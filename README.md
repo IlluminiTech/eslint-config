@@ -63,6 +63,14 @@ We export two ESLint configurations for your usage:
 
 ### Default Config
 
+Includes spellcheck rules with
+
+- [`eslint-plugin-spellcheck`](https://github.com/aotaduy/eslint-plugin-spellcheck)
+
+```sh
+npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-spellcheck
+```
+
 **In your `.eslintrc`:**
 
 ```json
@@ -81,7 +89,7 @@ Includes everything in the default config, plus environment specification and re
 - [`eslint-plugin-jsx-a11y`](https://github.com/evcohen/eslint-plugin-jsx-a11y)
 
 ```sh
-npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-react eslint-plugin-jsx-a11y
+npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-spellcheck eslint-plugin-react eslint-plugin-jsx-a11y
 ```
 
 **In your `.eslintrc`:**

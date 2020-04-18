@@ -39,11 +39,11 @@ Run `npm info "@illumini/eslint-config@latest" peerDependencies` to list the pee
    - **Option 2:** Without `npx`
 
      ```sh
-     npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier
+     npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-spellcheck
 
      # or
 
-     yarn add --dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier
+     yarn add --dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-spellcheck
      ```
 
 1. Create an `.eslintrc` file at the root of your project with the following:

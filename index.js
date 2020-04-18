@@ -54,7 +54,8 @@ module.exports = {
     "prefer-const": "error",
     "prefer-template": "error",
 
-    "spellcheck/spell-check": ["error", {
+    // Spellcheck
+    "spellcheck/spell-checker": ["error", {
       "comments": true,
       "strings": true,
       "identifiers": true,

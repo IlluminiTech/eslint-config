@@ -83,6 +83,7 @@ module.exports = {
         // Programming gibberish
         "addon",
         "addons",
+        "alt",
         "antialiased",
         "api",
         "arg",
@@ -142,6 +143,7 @@ module.exports = {
         "formatters",
         "fulfillable",
         "fullscreen",
+        "func",
         "getter",
         "gql",
         "graphql",

@@ -262,6 +262,8 @@ module.exports = {
       ],
       "skipIfMatch": [
         "http(s)?://[^s]*",
+        // SVG data attribute
+        "d=\"(.*)\"",
         // Hex colours
         "^#[0-9a-f]{3,6}$",
       ],

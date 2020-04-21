@@ -80,6 +80,12 @@ module.exports = {
         'color',
         'center',
 
+        // Fonts
+        'helvetica',
+        'roboto',
+        'neue',
+        'segoe',
+
         // Programming gibberish
         'addon',
         'addons',
@@ -257,6 +263,8 @@ module.exports = {
         'whitelist',
         'whitelisted',
         'www',
+        'xxl',
+        'xxs',
         'zindex',
 
         // Libraries

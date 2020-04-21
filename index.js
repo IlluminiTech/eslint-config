@@ -273,9 +273,14 @@ module.exports = {
         'unshift', // in Array#unshift
       ],
       'skipIfMatch': [
+        // Web addresses
         'http(s)?://[^s]*',
+        // Email addresses
+        '^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$',
+        // Twitter handle
+        '^@?(\w){1,15}$',
         // SVG data attribute
-        'd=\"(.+?)\"',
+        'd\=\"([MLQTCSAZVH])([^MLQTCSAZVH]*)\"',
         // Hex colours
         '^#[0-9a-f]{3,6}$',
       ],

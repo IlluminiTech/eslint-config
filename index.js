@@ -176,6 +176,7 @@ module.exports = {
         'lifecycle',
         'linter',
         'linters',
+        'mailto',
         'metadata',
         'middleware',
         'minified',
@@ -278,9 +279,9 @@ module.exports = {
         // Email addresses
         '^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$',
         // Twitter handle
-        '^@?(\w){1,15}$',
+        '^@?(a-zA-Z0-9_){1,15}$',
         // SVG data attribute
-        'd\=\"([MLQTCSAZVH])([^MLQTCSAZVH]*)\"',
+        'd=".*"',
         // Hex colours
         '^#[0-9a-f]{3,6}$',
       ],

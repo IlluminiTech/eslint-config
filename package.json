@@ -27,7 +27,6 @@
     "babel-eslint": "^10.x.x",
     "eslint": "^6.x.x",
     "eslint-config-prettier": "^6.x.x",
-    "eslint-plugin-spellcheck": "0.x.x",
     "prettier": "^2.x.x"
   }
 }

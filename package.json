@@ -3,7 +3,7 @@
   "version": "0.4.1",
   "description": "Illumini's base ESLint configuration.",
   "main": "index.js",
-  "contributers": [
+  "contributors": [
     "Wayne Haffenden <wayne@illumini.io>"
   ],
   "repository": {

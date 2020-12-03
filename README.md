@@ -12,6 +12,7 @@ Pairs well with our [`Prettier configuration`](https://www.npmjs.com/package/@il
   - [Configurations](#configurations)
     - [Default Config](#default-config)
     - [React Config](#react-config)
+    - [React Native Config](#react-native-config)
   - [Specifying Environments](#specifying-environments)
   - [Editor Integration & Autoformatting](#editor-integration--autoformatting)
     - [VS Code](#vs-code)
@@ -56,7 +57,7 @@ Run `npm info "@illumini/eslint-config@latest" peerDependencies` to list the pee
 
 ## Configurations
 
-We export two ESLint configurations for your usage:
+We export three ESLint configurations for your usage:
 
 1. [Default](#default-config)
 2. [React](#react-config)

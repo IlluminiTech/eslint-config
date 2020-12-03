@@ -60,12 +60,15 @@ We export two ESLint configurations for your usage:
 
 1. [Default](#default-config)
 2. [React](#react-config)
+3. [React Native Config](#react-native-config)
 
 ### Default Config
 
 ```sh
-npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier
+npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
+
+- [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import)
 
 **In your `.eslintrc`:**
 
@@ -85,7 +88,7 @@ Includes everything in the default config, plus environment specification and re
 - [`eslint-plugin-jsx-a11y`](https://github.com/evcohen/eslint-plugin-jsx-a11y)
 
 ```sh
-npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-spellcheck eslint-plugin-react eslint-plugin-jsx-a11y
+npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-spellcheck eslint-plugin-react eslint-plugin-jsx-a11y
 ```
 
 **In your `.eslintrc`:**
@@ -93,6 +96,24 @@ npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier esli
 ```json
 {
   "extends": "@illumini/eslint-config/react"
+}
+```
+
+### React Native Config
+
+Includes everything in the default and React config, plus environment specification and react-native specific rules with
+
+- [`@react-native-community/eslint-config`](https://github.com/facebook/react-native/tree/master/packages/eslint-config-react-native-community#readme)
+
+```sh
+npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-spellcheck eslint-plugin-react eslint-plugin-jsx-a11y @react-native-community/eslint-config
+```
+
+**In your `.eslintrc`:**
+
+```json
+{
+  "extends": "@illumini/eslint-config/react-native"
 }
 ```
 

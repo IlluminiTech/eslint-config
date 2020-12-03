@@ -8,8 +8,8 @@ module.exports = {
   'parserOptions': {
     'sourceType': 'module',
     'ecmaFeatures': {
-      'jsx': true
-    }
+      'jsx': true,
+    },
   },
   'env': {
     'browser': true,
@@ -17,6 +17,9 @@ module.exports = {
     'es6': true,
   },
   'rules': {
-    'react/no-unescaped-entities': ['error', { 'forbid': ['>', '\'', '}'] }]
-  }
+    'react/jsx-filename-extension': ['error', { 'extensions': ['.tsx'] }],
+    'react/no-unescaped-entities': ['error', { 'forbid': ['>', '\'', '}'] }],
+    'react-hooks/exhaustive-deps': ['error', { 'additionalHooks': '(useMemoOne)' }],
+    'react-hooks/rules-of-hooks': 'error',
+  },
 };

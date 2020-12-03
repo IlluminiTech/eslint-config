@@ -1,6 +1,6 @@
 {
   "name": "@illumini/eslint-config",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Illumini's base ESLint configuration.",
   "main": "index.js",
   "contributors": [

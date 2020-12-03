@@ -39,11 +39,11 @@ Run `npm info "@illumini/eslint-config@latest" peerDependencies` to list the pee
    - **Option 2:** Without `npx`
 
      ```sh
-     npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier
+     npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
 
      # or
 
-     yarn add --dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier
+     yarn add --dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
      ```
 
 1. Create an `.eslintrc` file at the root of your project with the following:
@@ -88,7 +88,7 @@ Includes everything in the default config, plus environment specification and re
 - [`eslint-plugin-jsx-a11y`](https://github.com/evcohen/eslint-plugin-jsx-a11y)
 
 ```sh
-npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-spellcheck eslint-plugin-react eslint-plugin-jsx-a11y
+npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-jsx-a11y
 ```
 
 **In your `.eslintrc`:**
@@ -106,7 +106,7 @@ Includes everything in the default and React config, plus environment specificat
 - [`@react-native-community/eslint-config`](https://github.com/facebook/react-native/tree/master/packages/eslint-config-react-native-community#readme)
 
 ```sh
-npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-spellcheck eslint-plugin-react eslint-plugin-jsx-a11y @react-native-community/eslint-config
+npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-jsx-a11y @react-native-community/eslint-config
 ```
 
 **In your `.eslintrc`:**
@@ -202,11 +202,11 @@ It's perfectly fine to use `console.log` during development, but you shouldn't u
 
 ```js
 // bad
-console.log('bad');
+console.log("bad");
 
 // good
-console.warn('Log a warn level message.');
-console.error('Log an error level message.');
+console.warn("Log a warn level message.");
+console.error("Log an error level message.");
 ```
 
 </details>
@@ -259,14 +259,14 @@ a == b;
 foo == true;
 bananas != 1;
 value == undefined;
-typeof foo == 'undefined';
+typeof foo == "undefined";
 
 // good
 a === b;
 foo === true;
 bananas !== 1;
 value === undefined;
-typeof foo === 'undefined';
+typeof foo === "undefined";
 ```
 
 </details>
@@ -336,8 +336,7 @@ Be consistent with brace style for blocks. Keep `else` on the same line as the p
 // bad
 if (foo) {
   bar();
-}
-else {
+} else {
   baz();
 }
 
@@ -362,7 +361,7 @@ Use trailing commas when possible.
 // bad
 const foo = {
   bar: baz,
-  qux: quux
+  qux: quux,
 };
 
 const arr = [1, 2];
@@ -385,10 +384,10 @@ Put spaces after commas. Don't put spaces before commas.
 
 ```js
 // bad
-const foo = 1
-  ,bar = 2;
-const arr = [1,2];
-const obj = { foo: bar,baz: qur };
+const foo = 1,
+  bar = 2;
+const arr = [1, 2];
+const obj = { foo: bar, baz: qur };
 foo(a, b);
 
 // good
@@ -408,19 +407,18 @@ Commas should come after and on the same line as an array element, object proper
 
 ```js
 // bad
-const foo = 1
-  ,bar = 2;
+const foo = 1,
+  bar = 2;
 
-const foo = 1
-  ,bar = 2;
+const foo = 1,
+  bar = 2;
 
-const foo = ['apples'
-            , 'oranges'];
+const foo = ["apples", "oranges"];
 
 function bar() {
   return {
-    a: 1
-    ,b: 2,
+    a: 1,
+    b: 2,
   };
 }
 
@@ -428,7 +426,7 @@ function bar() {
 const foo = 1,
   bar = 2;
 
-const foo = ['apples', 'oranges'];
+const foo = ["apples", "oranges"];
 
 function bar() {
   return {
@@ -447,7 +445,7 @@ Don't add a space between a function name and the opening parenthesis.
 
 ```js
 // bad
-fn ();
+fn();
 
 // good
 fn();
@@ -465,10 +463,10 @@ This ESLint config defaults to 2 space indentation.
 ```js
 // bad
 if (a) {
-    b = c;
-    function foo(d) {
-        e = f;
-    }
+  b = c;
+  function foo(d) {
+    e = f;
+  }
 }
 
 // good
@@ -489,8 +487,8 @@ Use consistent spacing between keys and values in object literals. Use a space a
 
 ```js
 // bad
-const obj = {foo: 42};
-const obj = {foo: 42 };
+const obj = { foo: 42 };
+const obj = { foo: 42 };
 
 // good
 const obj = { foo: 42 };
@@ -505,11 +503,11 @@ Use consistent spacing before and after keywords. Use at least one space before 
 
 ```js
 // bad
-if(foo) {
+if (foo) {
   //...
-}else if(bar) {
+} else if (bar) {
   //...
-} else{
+} else {
   //...
 }
 
@@ -532,21 +530,20 @@ Use a space inside of braces (except `{}`)
 
 ```js
 // bad
-const obj = {foo: 'bar'};
-const obj = { foo: 'bar'};
-const obj = {foo: 'bar',
-};
-const {x} = y;
-import {foo } from 'bar';
+const obj = { foo: "bar" };
+const obj = { foo: "bar" };
+const obj = { foo: "bar" };
+const { x } = y;
+import { foo } from "bar";
 
 // good
 const obj = {};
-const obj = { foo: 'bar' };
+const obj = { foo: "bar" };
 const obj = {
-  foo: 'bar',
+  foo: "bar",
 };
 const { x } = y;
-import { foo } from 'bar';
+import { foo } from "bar";
 ```
 
 </details>
@@ -588,7 +585,7 @@ const double = "double";
 const unescaped = 'a string containing "double" quotes';
 
 // good
-const single = 'single';
+const single = "single";
 const backtick = `back${x}tick`;
 ```
 
@@ -603,15 +600,15 @@ Use semicolons at the end of statements.
 
 ```js
 // bad
-const name = 'ESLint'
-let object = {}
+const name = "ESLint";
+let object = {};
 
 object.method = function () {
   // ...
-}
+};
 
 // good
-const name = 'ESLint';
+const name = "ESLint";
 let object = {};
 
 object.method = function () {
@@ -628,7 +625,7 @@ Don't put a space before the `(` of arguments.
 
 ```js
 // bad
-function foo () {
+function foo() {
   // ...
 }
 
@@ -639,9 +636,9 @@ const bar = function () {
 // good
 function foo() {
   // ...
-};
+}
 
-const bar = function() {
+const bar = function () {
   // ...
 };
 ```
@@ -655,13 +652,13 @@ Put spaces around infix operators.
 
 ```js
 // bad
-a+b;
+a + b;
 
-a+ b;
+a + b;
 
-a?b : c;
+a ? b : c;
 
-const a ={ b: 1 };
+const a = { b: 1 };
 
 // good
 a + b;
@@ -718,7 +715,7 @@ Omit parens when there is only one argument. Unnecessary parens make code less r
 (a) => {};
 (a) => a;
 (a) => {
-  '\n';
+  "\n";
 };
 a.then((foo) => {});
 a.then((foo) => a);
@@ -729,10 +726,10 @@ a((foo) => {
 
 // good
 () => {};
-a => {};
-a => a;
+(a) => {};
+(a) => a;
 () => {
-  '\n';
+  "\n";
 };
 ```
 
@@ -745,17 +742,17 @@ Put spaces before and after an arrow function’s arrow.
 
 ```js
 // bad
-()=> {};
-() =>{};
-a=> {};
-a=>{};
+() => {};
+() => {};
+(a) => {};
+(a) => {};
 
 // good
 () => {};
-a => {};
-a => a;
+(a) => {};
+(a) => a;
 () => {
-  '\n';
+  "\n";
 };
 ```
 
@@ -768,13 +765,13 @@ All imports from a single module should exist in a single import statement.
 
 ```js
 // bad
-import { merge } from 'module';
-import something from 'another-module';
-import { find } from 'module';
+import { merge } from "module";
+import something from "another-module";
+import { find } from "module";
 
 // good
-import { merge, find } from 'module';
-import something from 'another-module';
+import { merge, find } from "module";
+import something from "another-module";
 ```
 
 </details>
@@ -806,7 +803,7 @@ class A {
 
 class A extends B {
   constructor() {
-    super('foo');
+    super("foo");
   }
 }
 ```
@@ -876,11 +873,11 @@ Use template literals instead of string concatenation.
 
 ```js
 // bad
-const str = 'Hello,' + name + '!';
-const str = 'Time: ' + 12 * 60 * 60 * 1000;
+const str = "Hello," + name + "!";
+const str = "Time: " + 12 * 60 * 60 * 1000;
 
 // good
-const str = 'Hello World!';
+const str = "Hello World!";
 const str = `Hello, ${name}!`;
 const str = `Time: ${12 * 60 * 60 * 1000}`;
 ```

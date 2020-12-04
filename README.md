@@ -11,6 +11,7 @@ Pairs well with our [`Prettier configuration`](https://www.npmjs.com/package/@il
   - [Installation](#installation)
   - [Configurations](#configurations)
     - [Default Config](#default-config)
+    - [TypeScript Config](#typescript-config)
     - [React Config](#react-config)
     - [React Native Config](#react-native-config)
   - [Specifying Environments](#specifying-environments)
@@ -39,11 +40,11 @@ Run `npm info "@illumini/eslint-config@latest" peerDependencies` to list the pee
    - **Option 2:** Without `npx`
 
      ```sh
-     npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+     npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import
 
      # or
 
-     yarn add --dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+     yarn add --dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import
      ```
 
 1. Create an `.eslintrc` file at the root of your project with the following:
@@ -59,13 +60,14 @@ Run `npm info "@illumini/eslint-config@latest" peerDependencies` to list the pee
 We export three ESLint configurations for your usage:
 
 1. [Default](#default-config)
-2. [React](#react-config)
-3. [React Native Config](#react-native-config)
+2. [TypeScript](#typescript-config)
+3. [React](#react-config)
+4. [React Native](#react-native-config)
 
 ### Default Config
 
 ```sh
-npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import
 ```
 
 - [`eslint-plugin-import`](https://github.com/benmosher/eslint-plugin-import)
@@ -80,9 +82,25 @@ npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier esli
 
 > **NOTE:** Make sure to [specify your environment](#specifying-environments) based on your project
 
+### TypeScript Config
+
+Includes everything in the default config, plus environment specification and typescript-specific rules with
+
+```sh
+npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+
+**In your `.eslintrc`:**
+
+```json
+{
+  "extends": "@illumini/eslint-config/typescript"
+}
+```
+
 ### React Config
 
-Includes everything in the default config, plus environment specification and react-specific rules with
+Includes everything in the default and TypeScript config, plus environment specification and react-specific rules with
 
 - [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react)
 - [`eslint-plugin-jsx-a11y`](https://github.com/evcohen/eslint-plugin-jsx-a11y)
@@ -101,7 +119,7 @@ npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier esli
 
 ### React Native Config
 
-Includes everything in the default and React config, plus environment specification and react-native specific rules with
+Includes everything in the default, TypeScript and React config, plus environment specification and react-native specific rules with
 
 - [`@react-native-community/eslint-config`](https://github.com/facebook/react-native/tree/master/packages/eslint-config-react-native-community#readme)
 

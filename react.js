@@ -2,7 +2,7 @@ module.exports = {
   'extends': [
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
-    './index.js',
+    './typescript.js',
   ],
   'plugins': ['jsx-a11y'],
   'parserOptions': {

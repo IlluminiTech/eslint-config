@@ -2,7 +2,6 @@ module.exports = {
   'extends': [
     'eslint:recommended',
     'prettier',
-    'plugin:@typescript-eslint/recommended',
   ],
   'parser': 'babel-eslint',
   'parserOptions': {
@@ -69,10 +68,7 @@ module.exports = {
     'prefer-destructuring': 'error',
     'prefer-template': 'error',
 
-    // TypeScript
-    '@typescript-eslint/ban-ts-comment': 2,
-    '@typescript-eslint/no-explicit-any': 2,
-    '@typescript-eslint/explicit-module-boundary-types': 0,
+    // Imports
     'import/no-extraneous-dependencies': 2,
     'import/extensions': ['error', 'never', { 'svg': 'always' }],
     'import/no-named-as-default-member': 2,
@@ -87,6 +83,5 @@ module.exports = {
     'import/no-named-as-default': 0,
     'import/no-unused-modules': 0,
     'import/no-deprecated': 0,
-    '@typescript-eslint/indent': 0,
   },
 };

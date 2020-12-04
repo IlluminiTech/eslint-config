@@ -57,7 +57,7 @@ Run `npm info "@illumini/eslint-config@latest" peerDependencies` to list the pee
 
 ## Configurations
 
-We export three ESLint configurations for your usage:
+We export four ESLint configurations for your usage:
 
 1. [Default](#default-config)
 2. [TypeScript](#typescript-config)
@@ -103,10 +103,11 @@ npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier esli
 Includes everything in the default and TypeScript config, plus environment specification and react-specific rules with
 
 - [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react)
+- [`eslint-plugin-react-hooks`](https://github.com/facebook/react)
 - [`eslint-plugin-jsx-a11y`](https://github.com/evcohen/eslint-plugin-jsx-a11y)
 
 ```sh
-npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-jsx-a11y
+npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import eslint-plugin-react-hooks typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-jsx-a11y
 ```
 
 **In your `.eslintrc`:**
@@ -124,7 +125,7 @@ Includes everything in the default, TypeScript and React config, plus environmen
 - [`@react-native-community/eslint-config`](https://github.com/facebook/react-native/tree/master/packages/eslint-config-react-native-community#readme)
 
 ```sh
-npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-jsx-a11y @react-native-community/eslint-config
+npm install --save-dev @illumini/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-import eslint-plugin-react-hooks typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-jsx-a11y @react-native-community/eslint-config
 ```
 
 **In your `.eslintrc`:**

@@ -1,10 +1,11 @@
 module.exports = {
   'extends': [
     'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
     './typescript.js',
   ],
-  'plugins': ['jsx-a11y'],
+  'plugins': ['react-hooks', 'jsx-a11y'],
   'parserOptions': {
     'sourceType': 'module',
     'ecmaFeatures': {
